@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">body{width:1200px;margin:auto}#btn,#test{text-align:center}#test{margin:30px 0;background-image:-webkit-gradient(linear,left top,left bottom,from(#00f),to(#00f));background-image:-webkit-linear-gradient(#00f,#00f);background-image:linear-gradient(#00f,#00f);background-size:0 4px;background-position:bottom center;background-repeat:no-repeat;-webkit-transition-property:background-size,color;transition-property:background-size,color;-webkit-transition-duration:.3s;transition-duration:.3s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out;width:150px;height:44px;line-height:30px;font-size:30px}#test.active{color:#00f;background-size:100% 4px}#btn{width:120px;height:32px;font-size:24px;line-height:32px;border:1px solid #999;border-radius:6px;-webkit-box-shadow:0 0 2px 0 rgba(0,0,0,.1);box-shadow:0 0 2px 0 rgba(0,0,0,.1);cursor:pointer}</style>
+</head>
+<body>
+	<div id="test">
+		鱼香茄子
+	</div>
+	<div id="btn">切换样式</div>
+	<script type="text/javascript">
+		var oDiv = document.getElementById('test');
+		var oBtn =document.getElementById('btn');
+		oBtn.onclick = function(){
+			if(oDiv.classList.contains('active')){
+				oDiv.classList.remove('active')
+			}else{
+				oDiv.classList.add('active');
+			}
+		}
+	</script>
+</body>
+</html>
